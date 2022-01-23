@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: footer; }
+        .item5 { grid-area: footer2; }
+
+
+        
+        body {
+    display: block;
+    margin: 0px;
+}
+  
+        
+        .grid-container {
+          display: grid;
+          grid-template-areas:
+            'menu header header header header'
+            'menu main main main main'
+            'menu main main main main'
+            'menu footer footer footer footer'
+            'footer2 footer2 footer2 footer2 footer2';
+          color: rgb(255, 255, 255);
+            grid-gap: 2px;
+ 
+        }
+        
+        .grid-container > div {
+          
+          
+          
+          font-size: 30px;
+        }
+        .item1 {
+            height: 50px;
+            background: black;
+        }
+        .item2 {
+            background-color:rgb(7, 7, 7) ;
+            text-align: center;
+        }
+        .item3 {
+            height: 120vh;
+            background-color:rgb(14, 13, 13) ;
+
+
+           
+        }
+        .item4 {    
+            background: linear-gradient(to right, rgb(160, 67, 214) , rgb(41, 152, 226));
+            text-align: right;
+            height: auto;
+            padding: 1px;
+          
+        
+            
+        }
+        .item5 {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }  
+        #signin {
+            border-radius: 20px;
+            font-weight: bolder;
+            float: right;
+            margin-right: 20px;
+            margin-top: 7px;
+           
+            width: 120px;
+            background: transparent;
+            animation: none;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            margin-bottom: 4px;
+            font-size: 20px;
+            margin-top: 15px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            
+        }
+        #sign {
+            border-radius: 20px;
+            font-weight: bolder;
+            float: right;
+            margin-right: 20px;
+            margin-top: 7px;
+            padding: 10px;
+            width: 120px;
+            background: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        .brand {
+            background: transparent;
+            width: 100%;
+            height: 80px;
+            color: white;
+            padding-top: 35px;
+            
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #logo {
+            width: 40px;
+            height: 40px;
+            
+            margin-right: 4px;
+            
+        }
+        .options {
+            background: transparent;
+            width: 100%;
+            height: auto;
+            color: white;
+            padding-top: 35px;
+            cursor: pointer;
+        }
+       
+        
+        #optimg {
+            height: 25px;
+            width: 25px;
+            margin-left: 15px;
+            float: left;
+        }
+        .opt1 {
+            background-color: rgb(138, 141, 133);
+            padding: 2px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+        .opt2 {
+            background: transparent;
+            transition-duration: 2s;
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  
+  padding: 6px;
+  grid-gap: 0px;
+  margin-top: 10px;
+  margin-left: 12px;
+  
+
+}
+.grid-item1 {
+  background-color: rgba(37, 37, 37, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  height: 15vh;
+  width: 12vh;
+  border-radius: 2px;
+  
+
+}
+#cont {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    margin-left: 8px;
+    font-size: 23px;
+    color: white;
+}
+/* #see {
+    text-decoration: none;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    text-align: right;
+    font-size: small;
+    color: green;
+    display: flex;
+    float: right;
+    
+
+} */
+
+#play {
+    height: 70px;
+    width: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card {
+    background-color: transparent;
+    width:fill-content;
+    height: 90px;
+
+}
+.cardimg {
+    background-color: transparent;
+    height: auto;
+}
+ 
+.carddes {
+    background-color: transparent;
+    width:100%;
+    height: 40%;
+    bottom: 0;
+}
+#play2 {
+    height: 70px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#dess {
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+#f2 {
+    font-size: 12px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    margin-left: 9px;
+}
+#f4 {
+    font-size: small;
+    text-align: left;
+    margin-left: 9px;
+
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+#sign2 {
+    /* bottom:0;
+    right:0; */
+    position: absolute;
+    border-radius: 55px;
+    width: 174px;
+    margin-left: -190px;
+    margin-top: -15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(39, 124, 235);
+    text-decoration: none;
+    
+}
+
+#musicpw{
+	height: 8vh;
+	width: 100% ;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.main{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(12, 12, 12);
+}
+.main button{
+	padding: 10px 12px;
+	margin: 0 10px;
+}
+.main #logo{
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	font-size: 25px;
+	color: #ccc;
+}
+.main #logo i{
+	margin-right: 15px;
+}
+
+/* left & right part */
+.right,.left{
+	position: relative;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/* song image */
+.left img{
+	height: 300px;
+	width: 80%;
+	border-radius: 15px;
+	box-shadow: 1px 0px 20px 12px rgba(240,240,240,0.2);
+}
+
+/* both range slider part */
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 50%;
+	outline: none;
+	height: 2px;
+	margin: 0 15px;
+}
+input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	height: 20px;
+	width: 20px;
+	background: #2bc038;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.right input[type=range]{
+	width: 40%;
+}
+
+
+
+/* volume part */
+.left .volume{
+	
+    margin-bottom: -20px;
+	right: 0;
+	width: 90%;
+	height: 30px;
+	display: flex;
+	align-items: left;
+	justify-content: left;
+	color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#playb {
+    height: 40px;
+    width: 40px;
+}
+.left .volume p{
+	font-size: 15px;
+}
+.left .volume i{
+	cursor: pointer;
+	padding: 8px 12px;
+	background: transparent;
+
+}
+.left .volume i:hover{
+	background: rgba(14, 13, 13, 0.1);
+    
+
+}
+.volume #volume_show{
+	padding: 8px 12px;
+	margin: 0 5px 0 0;
+	background: rgba(14, 13, 13, 0.1);
+}
+
+
+
+/* right part */
+ .right .middle{
+ 	width: 130%;
+    display: flex;
+	align-items: center;
+	justify-content: left;
+    margin-bottom: 10px;
+}
+.right .middle button{
+	border: none;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;	
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	outline: none;
+	transition: 0.5s;
+	background: rgba(255,255,255,0.1);
+}
+.right #title{
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-transform: capitalize;
+	color: #fff;
+	font-size: 15px;
+}
+.right #artist{
+	position: absolute;
+	top: 110px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-transform: capitalize;
+	color: #fff;
+	font-size: 18px;
+}
+.right .duration{
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 160vh;
+	height: 20px;
+	margin-top: 40px;
+    margin-bottom: 10px;
+
+}
+.right .duration p{
+	color: #fff;
+	font-size: 15px;
+	margin-left: 20px;
+    
+}
+.right #auto{
+	font-size: 12px;
+	cursor: pointer;
+	margin-left: 195px;
+    margin-right: -250px;
+    margin-bottom: -50px;
+	border: none;
+	
+	color: #fff;
+	background: rgba(255,255,255,0.2);
+	outline: none;
+	border-radius: 10px;
+}
+.right #auto i{
+	margin-left: 8px;
+}
+#playb{
+	background: #2bc038;
+}
+.right button:hover{
+	background: #2bc038;
+}
+.right i:before{
+	color: #fff;
+	font-size: 20px;
+}
+
+.right .show_song_no{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.2);
+}
+.right .show_song_no p:nth-child(2){
+	margin: 0 5px;
+}
+.subtopic {
+    height:auto;
+    width: 100%;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-size: 21px;
+    margin-left: 8px;
+}
+span {
+    text-align: right;
+    color: rgb(37, 184, 37);
+    float: right;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    margin-right: 48px;
+    margin-top: 14px;
+}
+                                                 
+        </style>
+        </head>
+        <body>
+        
+        
+            
+        <div class="grid-container">
+          <div class="item1">
+            <button id="sign">Log In</button>
+              <a id="signin" href="">Sign up</a>
+          </div>
+          <div class="item2">
+              <div class="brand"><img id="logo" src="spotify (1).png">Spotify</div>
+                <div class="options">
+                    <div class="opt1"><img id="optimg" src="home.png"><a  id="opt" herf="#">Home</a></div><br>
+                    <div class="opt2"><img id="optimg" src="magnifying-glass-search.png" alt=""><a  id="opt" herf="">Search</a></div><br>
+                    <div class="opt2"><img id="optimg" src="music-album.png" alt=""><a  id="opt" herf="">Your Library</a></div><bR>
+                        <br><br>
+                        <div class="opt2"><img id="optimg" src="icons8-add-64.png" alt=""><a  id="opt" herf="">Create Playlist</a></div><bR>
+                            <div class="opt2"><img id="optimg" src="icons8-love-circled-50.png" alt=""><a  id="opt" herf="">Liked Songs</a></div><bR>
+
+
+                </div>
+            </div>
+          <div class="item3">
+              <p id="cont">Mood</p>
+              <div class="subtopic">Make your mood great<span>SEE ALL</span></div>
+            <div class="grid-container1">
+                
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg"> 
+                     <img src="m1.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="m2.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="m3.jpg" alt="" id="play2">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="m3.jpg" alt="" id="play2">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="m3.jpg" alt="" id="play2">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="m3.jpg" alt="" id="play2">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="m3.jpg" alt="" id="play2">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="m3.jpg" alt="" id="play2">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="m3.jpg" alt="" id="play2">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                 
+                </div>
+                <p id="cont">New popular releases</p>
+                <div class="subtopic">Listen to the latest songs<span>SEE ALL</span></div>
+
+                <div class="grid-container1">
+
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="n1.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="n2.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="n3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="n3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="n3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="n3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="n3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="n3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="n3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>  
+                </div>
+                <p id="cont">Bollywood</p><!-- <a id="see" href="">SEE ALL</a> -->
+                <div class="subtopic">Chill with latest bollywood music<span>SEE ALL</span></div>
+
+                <div class="grid-container1">
+
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="b1.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">                            <p id="dess">Mood Booster</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="b2.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="b3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="b3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="b3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="b3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="b3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="b3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="grid-item1">
+                    <div class="card">
+                        <div class="cardimg">                   
+                             <img src="b3.jpg" alt="" id="play">
+                        </div>
+                        <div class="carddes">
+                            <p id="dess">Mood Booster</p>
+
+                        </div>
+                    </div>
+                </div> 
+              </div>
+              <div class="item4"><p id="f2">PREVIEW OF SPOTIFY</p><button id="sign2">SIGN UP</button>
+                <p id="f4">Sign up to get unlimited songs and podcasts with ocassional ads.</p>
+    
+              </div>
+          </div>  
+        
+          <div class="item5">
+              <div id="musicpw">
+                <div class="main">
+  
+    
+                    <!--- left part --->
+                     <div class="left">
+                
+                      <!--- song img --->
+                      
+                         <div class="volume">
+                            <p id="volume_show">90</p>
+                            <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+                            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+                         </div>
+                
+                     </div>
+                 
+                
+                     <!--- right part --->
+                       <div class="right">
+                
+                       
+                
+                       <!--- song title & artist name --->
+                      <p id="title">title.mp3</p>
+                      <p id="artist">Artist name</p>
+                
+                      <!--- middle part --->
+                           <div class="middle">
+                             <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                             <button onclick="justplay()" id="playb"><i class="fa fa-play" aria-hidden="true"></i></button>
+                             <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+                         </div>
+                
+                       <!--- song duration part --->
+                        <div class="duration">
+                           <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+                        </div>
+                      </div>
+                
+                
+                  </div>
+              </div>  
+          </div>
+
+       
+        </div>
+        <script src="script.js"></script>
+        </body>
+        </html>
+</html>
